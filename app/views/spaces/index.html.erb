@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Make space for U</title>
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    <header>
+      <div class="heading">
+        <h1 class="title">Make space for U</h1>
+      </div>
+      <div class='nav'>
+      <ul class='nav-lists'>
+        <li class='sign-in'>Sign in</li>
+        <li class='sign-up'>Sign up</li>
+      </ul>   
+      </div>
+    </header>
+
+    <div class="contents">
+      <div class="first-view">
+        <!-- 『トップメッセージ』を表示する -->
+        <h2 class="heading-message">”おかえり”と自分の心に声を掛けられる場はありますか？</h2>
+        <h2 class="heading-message">ここは『プロ』を目指して頑張るすべての方のための”Third place”</h2>
+        <h2 class="heading-message">本来の貴方に返る”スペース”を自由に作り、仲間との交流ができます。</h2>  
+      </div> 
+      
+      <div class="middle-content">  
+        <ul class="image-list">
+          <li>
+            <%= image_tag '/programming-image.jpg', class: 'content-image' %>
+            <h4 class="image-name">IT Engineer</h4>
+          </li>
+          <li>
+            <%= image_tag '/yoga-image.jpg', class: 'content-image' %>
+            <h4 class="image-name">Yoga Instructor</h4>
+          </li>
+          <li>
+            <%= image_tag '/teacher-image.jpg', class: 'content-image' %>
+            <h4 class="image-name">Teacher</h4>
+          </li> 
+      </div>
+        <!-- 『ボトムメッセージ』を表示する -->
+          <ul class="messages">
+          <li class="message">
+            <div class="main-message">同じ道を歩む者どうしで本音で語り合いませんか？</div>
+          </li>
+          <li class="message">
+            <div class="main-message">違う道を進む者どうし気づきを伝え合いませんか？</div>
+          </li>
+          <li class="message">
+            <div class="main-message">必要なのはただ、”想いやりの言葉”と”飾らない心”だけ…</div>
+          </li>
+          <li class="lsat-message">
+            <div class="last-message">Make space For U, So come back to You.</div>
+          </li>
+        </ul>  
+      </div>
+
+      <footer>
+        <p>Copyright(C) Make space for U ALL RIGHTS RESERVED.</p>
+      </footer>
+    </div>
+  </body>
+</html>
