@@ -124,15 +124,17 @@ li{
   margin: 0 160px;
 }
 .image-list{
+  padding: 60px;
   display: flex;
   justify-content: space-around;
-
+  align-items: center;
 }
 
 .content-image {
   height: 300px;
   width: 300px;
-  padding: 60px 60px 5px 60px;
+  border-radius: 50%;
+  
 }
 
 .image-name {
