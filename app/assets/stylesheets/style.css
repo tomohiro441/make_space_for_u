@@ -48,6 +48,17 @@ header {
   margin-left: 15px;
 }
 
+.user-nickname{
+  font-size: 18px;
+  color: white;
+}
+
+.sign-out{
+  font-size: 18px;
+  color:white;
+  margin-left: 15px;
+}
+
 li{
   list-style: none;
 }
