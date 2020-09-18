@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname
+    validates :learning,   length: { minimum: 1, maximum: 20 }
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
     validates :email, :email, { format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false } }
     validates :password, format: { with: /([0-9].*[a-zA-Z]|[a-zA-Z].*[0-9])/ }

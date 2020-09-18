@@ -40,23 +40,27 @@ header {
 .sign-in{
   font-size: 18px;
   color: white;
+  text-decoration: none;
 }
 
 .sign-up{
   font-size: 18px;
   color:white;
   margin-left: 15px;
+  text-decoration: none;
 }
 
 .user-nickname{
   font-size: 18px;
   color: white;
+  text-decoration: none;
 }
 
 .sign-out{
   font-size: 18px;
   color:white;
   margin-left: 15px;
+  text-decoration: none;
 }
 
 li{
