@@ -43,6 +43,7 @@
 .form {
   background-color: #595959;
   height: 90px;
+  padding: 0 40px;
 }
 
 .side-box {
@@ -86,4 +87,29 @@ a {
 .space-edit {
   color: aliceblue;
   display: inline;
+}
+
+.new-message {
+  display: flex; 
+}
+
+.input-text {
+  font-size: 16px;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  margin-top: 20px;
+  color: black;
+  border-style: none;
+}
+
+.submit-btn {
+  width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  margin: 20px 0 0 15px;
+  background-color: snow;
+  font-size: 15px;
+  color: slateblue;
+  cursor: pointer;
 }
