@@ -5,29 +5,27 @@
 
 .chat-side {
   width: 300px;
-  background-color: #333333;
 }
 
 .chat-main {
   width: calc(100% - 300px);
-  background-color: #1a1d21;
 }
 
 .side-header {
-  background-color: #595959;
+  background-color: rgb(59, 0, 66);
   height: 100px;
   display: flex;
   align-items: center;
 }
 
 .groups {
-  background-color: #333333;
+  background-color: #f7feff;
   height: calc(100vh - 100px);
 }
 
 .main-header {
   height: 100px;
-  background-color: #3f3f3f;
+  background-color: #f7feff;
   border-bottom: 1px solid #595959;
   display: flex;
   padding: 0 40px;
@@ -56,12 +54,12 @@
 }
 
 .user-name {
-  color: aliceblue;
+  color: white;
   padding: 0;
 }
 
 .menu {
-  color: aliceblue;
+  color: white;
   display: flex;
 }
 
@@ -75,17 +73,17 @@ a {
 }
 
 .current-group {
-  color: aliceblue;
+  color: black;
 }
 
 .edit-btn {
   font-size: 16px;
-  border: 1px solid aliceblue;
+  border: 1px solid black;
   padding: 15px 20px;
 }
 
 .space-edit {
-  color: aliceblue;
+  color: black;
   display: inline;
 }
 
