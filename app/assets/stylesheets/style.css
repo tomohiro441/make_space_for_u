@@ -40,12 +40,14 @@ header {
 .sign-in{
   font-size: 18px;
   color: white;
+  height: 20px;
   text-decoration: none;
 }
 
 .sign-up{
   font-size: 18px;
   color:white;
+  height: 20px;
   margin-left: 15px;
   text-decoration: none;
 }
@@ -59,8 +61,17 @@ header {
 .sign-out{
   font-size: 18px;
   color:white;
+  padding: 3px;
   margin-left: 15px;
   text-decoration: none;
+}
+
+.enter-btn {
+  font-size: 22px;
+  color: white;
+  margin: 0 15px;
+  border: 2px solid #b84c00;
+  text-decoration: none; 
 }
 
 li{
