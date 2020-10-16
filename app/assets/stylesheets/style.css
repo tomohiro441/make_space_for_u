@@ -14,7 +14,7 @@ ul,li {
   margin: 0;
 }
 
-.wrapper{
+.top-wrapper{
   min-height: 100vh;
   position: relative;
   padding-bottom: 60px;
@@ -115,7 +115,7 @@ li{
   flex-direction: column;
 }
 
-.messages{
+.top-messages{
   height: 150px;
   width: 100%;
 }
