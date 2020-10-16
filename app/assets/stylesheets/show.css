@@ -16,6 +16,8 @@
 .side-header {
   background-color: #595959;
   height: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .groups {
@@ -37,4 +39,31 @@
 .form {
   background-color: #595959;
   height: 90px;
+}
+
+.side-box {
+  height: 20px;
+  width: 260px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.user-name {
+  color: aliceblue;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+}
+
+.new-group {
+  color: aliceblue;
+  margin-right: 5px;
+}
+
+a {
+  text-decoration: none;
 }
