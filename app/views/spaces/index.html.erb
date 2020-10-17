@@ -1,13 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Make space for U</title>
-  </head>
-  
-  <body>
-    <div class="wrapper">
+    <div class="top-wrapper">
     <header>
       <div class="heading">
         <h1 class="title">Make space for U</h1>
@@ -21,6 +12,7 @@
         <li><%= link_to 'Sign in', "/users/sign_in", class: "sign-in" %></li>
         <li><%= link_to 'Sign up', "/users/sign_up", class: "sign-up" %></li>
       <% end %>
+        <li><%= link_to 'Enter', "/spaces/show", class: "enter-btn" %></li>
       </ul>   
       </div>
     </header>
@@ -53,7 +45,7 @@
           <li class="message">
             <div class="main-message">同じ道を歩む者どうしで本音で語り合いませんか？</div>
           </li>
-          <li class="message">
+          <li class="top-message">
             <div class="main-message">違う道を進む者どうし気づきを伝え合いませんか？</div>
           </li>
           <li class="message">
@@ -69,6 +61,3 @@
         <p>Copyright(C) Make space for U ALL RIGHTS RESERVED.</p>
       </footer>
     </div>
-  </body>
-</html>
-
