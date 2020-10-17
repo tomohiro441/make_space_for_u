@@ -1,7 +1,9 @@
 FactoryBot.define do
   factory :user do
     nickname              { 'Faker::Name.name' }      
-    learning              { 'ITエンジニア' }
+    profession            { 'ITエンジニア' }
+    feature1              { 'IT業界未経験' }
+    feature2              { '30代' }
     email                 { Faker::Internet.free_email }
     password              { 'abc1234' }
     password_confirmation { 'abc1234' }
