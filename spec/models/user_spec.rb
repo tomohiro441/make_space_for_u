@@ -19,15 +19,35 @@ describe User do
         @user.valid?
         expect(@user.errors.full_messages).to include("Nickname can't be blank")
       end
-      it 'learningが空では登録できない' do
-        @user.learning = ''
+      it 'professionが空では登録できない' do
+        @user.profession = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Learning can't be blank")
+        expect(@user.errors.full_messages).to include("Profession can't be blank")
       end
-      it 'learningが20文字を超えると登録できない' do
-        @user.learning = '012345678901234567890'
+      it 'professionが10文字を超えると登録できない' do
+        @user.profession = '012345678901'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Learning is too long (maximum is 20 characters)")
+        expect(@user.errors.full_messages).to include("Profession is too long (maximum is 10 characters)")
+      end
+      it 'feature1が空では登録できない' do
+        @user.feature1 = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Feature1 can't be blank")
+      end
+      it 'Feature1が8文字を超えると登録できない' do
+        @user.feature1 = '012345678901'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Feature1 is too long (maximum is 8 characters)")
+      end
+      it 'feature2が空では登録できない' do
+        @user.feature2 = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Feature2 can't be blank")
+      end
+      it 'Feature2が8文字を超えると登録できない' do
+        @user.feature2 = '012345678901'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Feature2 is too long (maximum is 8 characters)")
       end
       it 'emailが空では登録できない' do
         @user.email = ''
