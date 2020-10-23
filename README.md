@@ -22,3 +22,65 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# テーブル設計
+
+## users テーブル
+
+| Column             | Type   | Options     |
+| --------           | ------ | ----------- |
+| nickname           | string | null: false |
+| profession         | string | null: false |
+| feature1           | string | null: false |
+| feature2           | string | null: false |
+| email              | string | null: false |
+| password           | string | null: false |
+| last_name          | string | null: false |
+| first_name         | string | null: false |
+| last_name_reading  | string | null: false |
+| first_name_reading | string | null: false |
+| birthday           | date   | null: false |
+
+### Association
+
+- has_many :spaces_users
+- has_many :spaces, through: space_users
+- has_many :chats
+
+## spaces テーブル
+
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
+| info   | text   | null: false |
+
+### Association
+
+- has_many :space_users
+- has_many :users, through: space_users
+- has_many :chats
+
+## space_users テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| space  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :room
+- belongs_to :user
+
+## chats テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     |                                |
+| user    | references | null: false, foreign_key: true |
+| space   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :space
+- belongs_to :user
