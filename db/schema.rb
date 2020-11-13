@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_17_101859) do
+ActiveRecord::Schema.define(version: 2020_10_30_065308) do
 
   create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content", null: false
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2020_10_17_101859) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["space_id"], name: "index_chats_on_space_id"
     t.index ["user_id"], name: "index_chats_on_user_id"
+  end
+
+  create_table "space_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "space_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["space_id"], name: "index_space_users_on_space_id"
+    t.index ["user_id"], name: "index_space_users_on_user_id"
   end
 
   create_table "spaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,4 +61,6 @@ ActiveRecord::Schema.define(version: 2020_10_17_101859) do
 
   add_foreign_key "chats", "spaces"
   add_foreign_key "chats", "users"
+  add_foreign_key "space_users", "spaces"
+  add_foreign_key "space_users", "users"
 end
