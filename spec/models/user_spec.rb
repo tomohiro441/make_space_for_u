@@ -27,7 +27,7 @@ describe User do
       it 'professionが15文字を超えると登録できない' do
         @user.profession = '012345678901234567'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Profession is too long (maximum is 10 characters)")
+        expect(@user.errors.full_messages).to include("Profession is too long (maximum is 15 characters)")
       end
       it 'feature1が空では登録できない' do
         @user.feature1 = ''
@@ -37,7 +37,7 @@ describe User do
       it 'Feature1が15文字を超えると登録できない' do
         @user.feature1 = '012345678901234567'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Feature1 is too long (maximum is 8 characters)")
+        expect(@user.errors.full_messages).to include("Feature1 is too long (maximum is 15 characters)")
       end
       it 'feature2が空では登録できない' do
         @user.feature2 = ''
@@ -47,7 +47,7 @@ describe User do
       it 'Feature2が815文字を超えると登録できない' do
         @user.feature2 = '012345678901234567'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Feature2 is too long (maximum is 8 characters)")
+        expect(@user.errors.full_messages).to include("Feature2 is too long (maximum is 15 characters)")
       end
       it 'emailが空では登録できない' do
         @user.email = ''
