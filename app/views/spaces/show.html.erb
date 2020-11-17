@@ -2,7 +2,8 @@
   <div class="chat-side">
     <div class="side-header">
       <div class="side-box">
-        <p class="user-name">USER NAME</p>
+        <%# <p class="user-name">USER NAME</p> %>
+        <p class="user-name"><%= current_user.nickname %></p>
         <ul class="menu">
           <li class="new-group"><a href="#">new</a></li>
           <li class="edit-user"><a href="#">edit</a></li>

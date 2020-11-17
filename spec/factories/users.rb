@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    nickname              { 'Faker::Name.name' }      
+    nickname              { 'Faker::Name.name' }
     profession            { 'ITエンジニア' }
     feature1              { 'IT業界未経験' }
     feature2              { '30代' }
