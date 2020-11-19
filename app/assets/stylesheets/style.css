@@ -20,8 +20,6 @@ ul,li {
   padding-bottom: 60px;
   box-sizing: border-box;
   background-image: url("/top-image.jpg");
-  background-color:rgb(255, 255, 255, 0.2);
-  background-blend-mode:lighten;
   background-size: cover;
 }
 
