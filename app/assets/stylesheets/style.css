@@ -20,6 +20,8 @@ ul,li {
   padding-bottom: 60px;
   box-sizing: border-box;
   background-image: url("/top-image.jpg");
+  background-color:rgb(255, 255, 255, 0.2);
+  background-blend-mode:lighten;
   background-size: cover;
 }
 
@@ -88,10 +90,13 @@ li{
   font-size : 25px;
   font-family: serif; 
   font-style: italic;
-  color: powderblue;
+  font-weight: bold;
+  color:silver;
   width:80vw;
   padding-top: 15px;
   margin-left:70px;
+  justify-content: center;
+  text-align: center;
 }
 
 .navbar {
@@ -125,7 +130,7 @@ li{
   font-size: 25px;
   font-weight: bolder;
   font-style: italic;
-  color: powderblue;
+  color:silver;
   padding-bottom: 7px;
   display: flex;
   font-size: 25px;
@@ -138,7 +143,7 @@ li{
   font-size : 25px;
   font-weight: bolder;
   font-style: italic;
-  color: powderblue;
+  color:silver;
   height: 60px;
   display: flex;
   justify-content: center;
