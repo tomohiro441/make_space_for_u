@@ -45,7 +45,7 @@ Things you may want to cover:
 
 - has_many :spaces_users
 - has_many :spaces, through: space_users
-- has_many :chats
+- has_many :messages
 
 ## spaces テーブル
 
@@ -58,7 +58,7 @@ Things you may want to cover:
 
 - has_many :space_users
 - has_many :users, through: space_users
-- has_many :chats
+- has_many :messages
 
 ## space_users テーブル
 
@@ -72,7 +72,7 @@ Things you may want to cover:
 - belongs_to :room
 - belongs_to :user
 
-## chats テーブル
+## messages テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
@@ -102,5 +102,5 @@ Things you may want to cover:
 前記の「解決すべき課題」に対して
 ①ダイアリー
 ②自己紹介
-③チャット
+③メッセージ
 によって解決する。 -->

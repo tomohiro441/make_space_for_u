@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_10_30_065308) do
 
-  create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content", null: false
     t.bigint "user_id", null: false
     t.bigint "space_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["space_id"], name: "index_chats_on_space_id"
-    t.index ["user_id"], name: "index_chats_on_user_id"
+    t.index ["space_id"], name: "index_messages_on_space_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "space_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 2020_10_30_065308) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "chats", "spaces"
-  add_foreign_key "chats", "users"
+  add_foreign_key "messages", "spaces"
+  add_foreign_key "messages", "users"
   add_foreign_key "space_users", "spaces"
   add_foreign_key "space_users", "users"
 end

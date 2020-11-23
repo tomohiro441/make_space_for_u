@@ -3,11 +3,11 @@
   height: 100vh;
 }
 
-.chat-side {
+.message-side {
   width: 300px;
 }
 
-.chat-main {
+.message-main {
   width: calc(100% - 300px);
 }
 
@@ -33,8 +33,8 @@
   justify-content: space-between;
 }
 
-.chat-messages {
-  background-image: url("/chat-space.jpg");
+.message-field {
+  background-image: url("/message-space.jpg");
   background-size: cover;
   opacity: 0.2;
   height: calc(100vh - 190px);
@@ -91,6 +91,17 @@ a {
 
 .new-message {
   display: flex; 
+}
+
+.input-title {
+  font-size: 16px;
+  height: 50px;
+  width: 200px;
+  margin: 0 15px;
+  padding-left: 15px;
+  margin-top: 20px;
+  color: black;
+  border-style: none;
 }
 
 .input-text {

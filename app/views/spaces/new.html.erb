@@ -1,28 +1,28 @@
-<div class='chat-space-form'>
-  <h1>新規チャットスペース</h1>
+<div class='message-space-form'>
+  <h1>Create a new space</h1>
   <%=form_with model: @space, local: true do |f|%>
-    <div class='chat-space-form__field'>
-      <div class='chat-space-form__field--left'>
-        <%= f.label :チャットスペース名, class: 'chat-space-form__label'%>
+    <div class='message-space-form__field'>
+      <div class='message-space-form__field--left'>
+        <%= f.label :Name, class: 'message-space-form__label'%>
       </div>
-      <div class='chat-space-form__field--right'>
-        <%= f.text_field :name, class: 'chat__space_name chat-space-form__input', placeholder: 'チャットスペース名を入力してください'%>
-      </div>
-    </div>
-    <div class='chat-space-form__field'>
-    </div>
-    <div class='chat-space-form__field'>
-      <div class='chat-space-form__field--left'>
-        <label class='chat-space-form__label' for='chat_space_スペースの説明'>スペースの説明</label>
-      </div>
-      <div class='chat-space-form__field--right'>
-        <%= f.text_field :name, class: 'chat__space_name chat-space-form__input', placeholder: '例:スクールでプログラミング（ruby・rails）を学習中です。'%>
+      <div class='message-space-form__field--right'>
+        <%= f.text_field :name, class: 'message__space_name message-space-form__input', placeholder: '3つのスペースを創って、オリジナルの命名をしましょう'%>
       </div>
     </div>
-    <div class='chat-space-form__field'>
-      <div class='chat-space-form__field--left'></div>
-      <div class='chat-space-form__field--right'>
-        <%= f.submit class: 'chat-space-form__action-btn'%>
+    <div class='message-space-form__field'>
+    </div>
+    <div class='message-space-form__field'>
+      <div class='message-space-form__field--left'>
+        <label class='message-space-form__label' for='message_space_スペースの説明'>Information</label>
+      </div>
+      <div class='message-space-form__field--right'>
+        <%= f.text_field :name, class: 'message__space_name message-space-form__input', placeholder: '他の人が見つけやすいように、キーワードを散りばめて説明しましょう'%>
+      </div>
+    </div>
+    <div class='message-space-form__field'>
+      <div class='message-space-form__field--left'></div>
+      <div class='message-space-form__field--right'>
+        <%= f.submit class: 'message-space-form__action-btn'%>
       </div>
     </div>
   <% end %>

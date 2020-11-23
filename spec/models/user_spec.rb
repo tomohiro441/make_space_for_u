@@ -19,6 +19,11 @@ describe User do
         @user.valid?
         expect(@user.errors.full_messages).to include("Nickname can't be blank")
       end
+      it 'nicknameが20文字を超えると登録できない' do
+      @user.nickname = '0123456789012345678901'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Nickname is too long (maximum is 20 characters)')
+      end
       it 'professionが空では登録できない' do
         @user.profession = ''
         @user.valid?

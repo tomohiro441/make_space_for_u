@@ -1,4 +1,4 @@
 FactoryBot.define do
-  factory :chat do
+  factory :message do
   end
 end

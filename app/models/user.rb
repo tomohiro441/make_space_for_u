@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+        :recoverable, :rememberable, :validatable
 
   with_options presence: true do
-    validates :nickname
+    validates :nickname, length: { minimum: 1, maximum: 20 }
     validates :profession, length: { minimum: 1, maximum: 15 }
     validates :feature1,  length: { minimum: 1, maximum: 15 }
     validates :feature2,  length: { minimum: 1, maximum: 15 }

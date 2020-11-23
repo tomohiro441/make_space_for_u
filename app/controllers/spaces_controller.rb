@@ -16,6 +16,12 @@ class SpacesController < ApplicationController
       render :new
     end
 
+    def edit
+    end
+    
+    def upadate
+    end  
+
     def show
     end
 
