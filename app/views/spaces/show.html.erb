@@ -4,13 +4,20 @@
       <div class="side-box">
         <p class="user-name"><%= current_user.nickname %></p> 
         <ul class="menu">
-          <li class="new-group"><a href="/spaces/new">new</a></li>
-          <li class="edit-user"><a href="#">edit</a></li>
+          <li class="new-group"><a href="/spaces/new">make a new space</a></li>
         </ul>  
       </div>
     </div>  
-      <div class="groups"></div>
+    <div class="groups">
+      <% current_user.spaces.each do |space| %>
+        <div class="space">
+          <div class="space-name">
+            <a href="#"><%= space.name %></a>
+          </div>
+        </div>
+      <% end %>      
     </div>
+  </div>  
   <div class="message-main">
     <div class="main-header">
       <h2 class="current-group">Space Name<h2>
@@ -18,7 +25,46 @@
         <div class="space-exit">Exit</div>
       </a>  
     </div>
-    <div class="message-field"></div>
+
+    <div class="message-field">
+      <div class="frame">
+    <div class="upper-message">
+      <div class="message-user">
+        Tom
+      </div>
+      <div class="message-title">
+        タイトル名
+      </div>
+      <div class="message-date">
+        2020/3/31(Wed) 12:43:30
+      </div>
+    </div>
+    <div class="lower-message">
+      <div class="message-content">
+        おはよう
+      </div>
+    </div>
+  </div>
+
+  <div class="frame">
+    <div class="upper-message">
+      <div class="message-user">
+        Tom
+      </div>
+      <div class="message-title">
+        タイトル名
+      </div>
+      <div class="message-date">
+        2020/3/31(Wed) 12:47:30
+      </div>
+    </div>
+    <div class="lower-message">
+      <div class="message-content">
+        こんばんは
+      </div>
+    </div>
+  </div>
+    </div>
     <div class="form">
       <form class="new-message"> 
         <input class="input-title" placeholder="title" type="text">  

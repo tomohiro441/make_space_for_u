@@ -18,11 +18,26 @@
   align-items: center;
 }
 
+.new-group{
+  padding: 5px;
+  border: solid violet 1px;
+}
+
 .groups {
   background-color: #f7feff;
   height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
 }
 
+.space {
+  padding: 20px 0 40px;
+}
+
+.space-name a {
+  text-decoration: none;
+  color: black;
+}
 .main-header {
   height: 100px;
   background-color: #f7feff;
@@ -36,8 +51,47 @@
 .message-field {
   background-image: url("/message-space.jpg");
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.4;
   height: calc(100vh - 190px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.message-field {
+  background-color: thistle;
+  margin: 10px 0 0 0;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.message-user {
+  color: black;
+  font-size: 16px;
+}
+
+.message-title {
+  color: black;
+  font-size: 16px;
+  margin-left: 10px;
+  border-bottom: solid blue 2px;
+}
+
+.message-date {
+  color: black;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-content {
+  color: black;
+  font-size: 14px;
+  margin-bottom: 40px;
 }
 
 .form {
@@ -47,7 +101,7 @@
 }
 
 .side-box {
-  height: 20px;
+  height: 30px;
   width: 260px;
   margin: 0 20px;
   display: flex;
@@ -57,16 +111,12 @@
 
 .user-name {
   color: white;
-  padding: 0;
+  padding: 5px;
 }
 
 .menu {
   color: white;
   display: flex;
-}
-
-.new-group {
-  margin-right: 5px;
 }
 
 a {

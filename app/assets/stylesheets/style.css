@@ -125,6 +125,10 @@ li{
   width: 100%;
 }
 
+.frame{
+  background-color: thistle;
+}
+
 .main-message{
   font-family: serif;
   font-size: 25px;

@@ -11,24 +11,18 @@ class SpacesController < ApplicationController
   def create
     @space = Space.new(space_params)
     if @space.save
-      redirect_to show
+      redirect_to "/spaces#show"
     else
       render :new
-    end
-
-    def edit
-    end
+    end 
+  end
     
-    def upadate
-    end  
+  def show
+  end
 
-    def show
-    end
+  private
 
-    private
-
-    def space_params
-      params.require(:space).permit(:name, :info)
-    end
+  def space_params
+    params.require(:space).permit(:name, :info)
   end
 end
