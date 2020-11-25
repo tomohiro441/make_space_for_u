@@ -1,57 +1,76 @@
-    <div class="top-wrapper">
-    <header>
-      <div class="heading">
-        <h1 class="title">あなたにとって欠かせない、”3つのスペース”を作りましょう！</h1>
-      </div>
-      <div class='nav'>
-      <ul class='nav-lists'>
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-        <li><%= link_to 'SignOut', "/users/sign_out", method: :delete, class: "sign-out" %></li>
-      <% else %>
-        <li><%= link_to 'SignIn', "/users/sign_in", class: "sign-in" %></li>
-        <li><%= link_to 'SignUp', "/users/sign_up", class: "sign-up" %></li>
-      <% end %>
-        <li><%= link_to 'Enter', "/spaces/show", class: "enter-btn" %></li>
-      </ul>   
-      </div>
-    </header>
-
-    <div class="contents">
-      <div class="first-view">
-        <!-- 『トップメッセージ』を表示する -->
-        <h2 class="heading-message">毎日の学びを記録する ”1st place”</h2>
-        <h2 class="heading-message">将来へ向けた自己分析 ”2nd place"</h2>
-        <h2 class="heading-message">伝え合うことで繋がる ”3rd place"</h2>  
-      </div> 
-      
-      <div class="middle-content">  
-        <ul class="image-list">
-          <li>
-            <%= image_tag '/programming-image.jpg', class: 'content-image' %>
-            <h4 class="image-name">歴史を記録する</h4>
-          </li>
-          <li>
-            <%= image_tag '/yoga-image.jpg', class: 'content-image' %>
-            <h4 class="image-name">自己を見つめる</h4>
-          </li>
-          <li>
-            <%= image_tag '/teacher-image.jpg', class: 'content-image' %>
-            <h4 class="image-name">誰かの先生になる</h4>
-          </li> 
-      </div>
-        <!-- 『ボトムメッセージ』を表示する -->
-          <ul class="messages">
-          <li class="message">
-            <div class="main-message">日々新たに。学んで、想って、伝えましょう！</div>
-          </li>
-          <li class="lsat-message">
-            <div class="last-message">Make space For U, So come back to You.</div>
-          </li>
+<div class="wrapper">
+  <div class="message-side">
+    <div class="side-header">
+      <div class="side-box">
+        <p class="user-name"><%= current_user.nickname %></p> 
+        <ul class="menu">
+          <li class="new-group"><a href="/spaces/new">make a new space</a></li>
         </ul>  
       </div>
-
-      <footer>
-        <p>Copyright(C) Make space for U ALL RIGHTS RESERVED.</p>
-      </footer>
+    </div>  
+    <div class="groups">
+      <% current_user.spaces.each do |space| %>
+        <div class="space">
+          <div class="space-name">
+            <a href="#"><%= space.name %></a>
+          </div>
+        </div>
+      <% end %>      
     </div>
+  </div>  
+  <div class="message-main">
+    <div class="main-header">
+      <h2 class="current-group">Space Name<h2>
+      <a href="/" class="exit-btn">
+        <div class="space-exit">Exit</div>
+      </a>  
+    </div>
+
+    <div class="message-field">
+      <div class="frame">
+    <div class="upper-message">
+      <div class="message-user">
+        Tom
+      </div>
+      <div class="message-title">
+        タイトル名
+      </div>
+      <div class="message-date">
+        2020/3/31(Wed) 12:43:30
+      </div>
+    </div>
+    <div class="lower-message">
+      <div class="message-content">
+        おはよう
+      </div>
+    </div>
+  </div>
+
+  <div class="frame">
+    <div class="upper-message">
+      <div class="message-user">
+        Tom
+      </div>
+      <div class="message-title">
+        タイトル名
+      </div>
+      <div class="message-date">
+        2020/3/31(Wed) 12:47:30
+      </div>
+    </div>
+    <div class="lower-message">
+      <div class="message-content">
+        こんばんは
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="form">
+      <form class="new-message"> 
+        <input class="input-title" placeholder="title" type="text">  
+        <input class="input-text" placeholder="text message" type="text">
+        <input class="submit-btn" type="submit" value="send">
+      </form>  
+    </div>
+  </div>  
+</div>

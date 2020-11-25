@@ -1,124 +1,176 @@
-h1 {
-  letter-spacing: 2px;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
+.wrapper {
+  display: flex;
+  height: 100vh;
 }
 
-h2 {
-  margin-bottom: 10px;
-  color: #f05050;
-  font-size: 14px;
+.message-side {
+  width: 300px;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.message-main {
+  width: calc(100% - 300px);
 }
 
-li {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
+.side-header {
+  background-color: #595959;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
 
-.message-space-form {
-  width: 980px;
-  margin: 60px auto;
-  padding: 40px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-.message-space-form__errors {
-  margin: 30px 0;
-  padding: 20px 40px;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  text-align: center;
-}
-.message-space-form__label {
-  display: block;
-  line-height: 50px;
-  font-weight: bold;
-  text-align: right;
-}
-.message-space-form__input {
-  float: left;
-  width: 100%;
-  line-height: 30px;
-  padding: 10px 15px;
-  box-sizing: border-box;
-}
-.message-space-form__action-btn {
-  display: inline-block;
-  padding: 12px 20px;
-  color: #fff;
-  background-color: #38aef0;
-  border: 0;
-}
-.message-space-form__field {
-  margin-top: 30px;
-}
-.message-space-form__field:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-.message-space-form__field--left {
-  float: left;
-  width: 30%;
-  padding-right: 20px;
-  padding-left: 20px;
-  box-sizing: border-box;
-}
-.message-space-form__field--right {
-  float: right;
-  width: 70%;
+.new-group{
+  padding: 5px;
+  border: solid violet 1px;
 }
 
-.message-space-user {
-  padding: 0 15px;
-  line-height: 50px;
-  font-size: 14px;
-  border-bottom: 1px solid #ddd;
-  width: 500px;
-  margin: 0 auto;
-}
-.message-space-user:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-.message-space-user__name {
-  float: left;
-}
-.message-space-user__btn {
-  float: right;
-  display: inline-block;
-  cursor: pointer;
-}
-.message-space-user__btn--add {
-  color: #38aef0;
-}
-.message-space-user__btn--remove {
-  color: #f05050;
+.groups {
+  background-color: #f7feff;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
 }
 
-.message-space-user__name a {
+.space {
+  padding: 20px 0 40px;
+}
+
+.space-name a {
   text-decoration: none;
-  color: #38aef0;
+  color: black;
+}
+.main-header {
+  height: 100px;
+  background-color: #f7feff;
+  border-bottom: 1px solid whitesmoke;
+  display: flex;
+  padding: 0 40px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-select {
-  width: 500px;
+.message-field {
+  background-image: url("/message-space.jpg");
+  background-size: cover;
+  opacity: 0.4;
+  height: calc(100vh - 190px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.message-field {
+  background-color: thistle;
+  margin: 0 0 0 0;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.message-user {
+  color: black;
+  font-size: 16px;
+}
+
+.message-title {
+  color: black;
+  font-size: 16px;
+  margin-left: 10px;
+  border-bottom: solid blue 2px;
+}
+
+.message-date {
+  color: black;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-content {
+  color: black;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.form {
+  background-color: #595959;
+  height: 90px;
+  padding: 0 40px;
+}
+
+.side-box {
+  height: 30px;
+  width: 260px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.user-name {
+  color: white;
+  padding: 5px;
+}
+
+.menu {
+  color: white;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.current-group {
+  color: #595959;
+}
+
+.exit-btn {
+  font-size: 16px;
+  border: 1px solid red;
+  padding: 15px 20px;
+}
+
+.space-exit {
+  color: black;
+  display: inline;
+}
+
+.new-message {
+  display: flex; 
+}
+
+.input-title {
+  font-size: 16px;
   height: 50px;
+  width: 200px;
+  margin: 0 15px;
+  padding-left: 15px;
+  margin-top: 20px;
+  color: black;
+  border-style: none;
 }
 
-.top-header {
-  background-color: #434a54;
-  height: 80px;
+.input-text {
+  font-size: 16px;
+  height: 50px;
   width: 100%;
+  padding: 0 15px;
+  margin-top: 20px;
+  color: black;
+  border-style: none;
+}
+
+.submit-btn {
+  width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  margin: 20px 0 0 15px;
+  background-color: snow;
+  font-size: 15px;
+  color: slateblue;
+  cursor: pointer;
 }
